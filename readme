@@ -1,0 +1,92 @@
+# 🌱 Smart Environment Monitoring System
+
+An Arduino-based environmental monitoring project that uses multiple sensors to monitor temperature, humidity, gas levels, soil moisture, and flame sensor readings. An LCD display provides real-time sensor information.
+
+## 🚀 Features
+
+- 🌡️ **Temperature Monitoring** — Measures temperature using DHT11.
+- 💧 **Humidity Monitoring** — Measures atmospheric humidity.
+- 🔥 **Flame Detection** — Reads the flame sensor to identify possible flames.
+- 💨 **Gas Level Monitoring** — Reads analog output from the gas sensor.
+- 🌱 **Soil Moisture Monitoring** — Estimates soil moisture percentage.
+- 📟 **LCD Display** — Displays sensor readings using a 16×2 I2C LCD.
+- 🖥️ **Serial Monitor** — Prints sensor readings for debugging and observation.
+
+## 🛠️ Hardware Requirements
+
+- Arduino UNO
+- DHT11 Temperature and Humidity Sensor
+- Gas Sensor Module (analog output)
+- Soil Moisture Sensor
+- Flame Sensor Module
+- 16×2 I2C LCD Display
+- Jumper Wires
+- Breadboard
+- USB Cable
+
+## 🔌 Pin Connections
+
+| Component | Arduino Pin |
+|---|---|
+| DHT11 Data | D2 |
+| Gas Sensor AO | A1 |
+| Soil Moisture Sensor AO | A2 |
+| Flame Sensor AO | A3 |
+| LCD SDA | A4 |
+| LCD SCL | A5 |
+| VCC | 5V |
+| GND | GND |
+
+**Note:** The LCD connections listed above are for an Arduino UNO using I2C.
+
+## 📚 Required Libraries
+
+Install the following libraries through the Arduino IDE Library Manager:
+
+1. DHT sensor library by Adafruit
+2. Adafruit Unified Sensor
+3. LiquidCrystal I2C
+
+## ⚙️ Getting Started
+
+1. Clone or download this repository.
+2. Open the Arduino sketch (`.ino`) in Arduino IDE.
+3. Install the required libraries.
+4. Connect the sensors according to the pin connection table.
+5. Select your Arduino board and COM port.
+6. Upload the code to the Arduino.
+7. Open Serial Monitor and set the baud rate to **9600**.
+8. Observe the sensor readings on the LCD and Serial Monitor.
+
+## 📊 How It Works
+
+The Arduino reads data from the connected sensors and processes the readings. Temperature and humidity are obtained from the DHT11, while gas, soil moisture, and flame sensor values are read through analog inputs.
+
+The processed readings are displayed on the LCD, and additional sensor information is printed in the Serial Monitor.
+
+## 🔮 Future Improvements
+
+- Add Wi-Fi connectivity using ESP8266 or ESP32.
+- Create a live web dashboard for sensor monitoring.
+- Send alerts when gas or flame readings exceed configured thresholds.
+- Improve soil moisture calibration.
+- Store sensor readings in a database for analysis.
+
+## ⚠️ Disclaimer
+
+This is an educational prototype. Sensor readings and thresholds require calibration. The project must not be used as a replacement for certified fire alarms, gas detectors, or other safety systems.
+
+## 👨‍💻 Author
+
+**Achuthan Rameshkumar**
+
+- GitHub: [@Achuthan24r](https://github.com/Achuthan24r)
+- LinkedIn: [Achuthan Rameshkumar](https://www.linkedin.com/in/achuthan-rameshkumar-48534b30a/)
+
+## 📄 License
+
+This project is open-source and available under the MIT License. Add a `LICENSE` file to the repository to apply that license.
+
+---
+
+⭐ If you find this project useful, consider giving the repository a star!
